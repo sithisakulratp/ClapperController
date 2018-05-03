@@ -1,7 +1,7 @@
 /*	index.js - Web service
  	author: Ploy Sithisakulrat
 	published: 5/2/2018
-	contribution: Taron Foxworth
+	project contributor: Taron Foxworth
 */
 
 //Get library
@@ -10,7 +10,7 @@ const express = require('express')
 const app = express()
 
 // CloudMQTT credentials
-//mqtt.connect('mqtt://[server]:[websockets port]'
+// mqtt.connect('mqtt://[server]:[websockets port]'
 var client = mqtt.connect('mqtt://[server]:[websockets port]', {
 	username: "[username]",
 	password: "[password]"
