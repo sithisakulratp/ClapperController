@@ -1,7 +1,7 @@
 /*	device.js - runs on RaspberryPi
 	author: Ploy Sithisakulrat
 	published on 5/2/2018
-	contribution: Taron Foxworth
+	project contributor: Taron Foxworth
 */
 
 //Get library
