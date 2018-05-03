@@ -1,36 +1,37 @@
-/*	device.js - runs on RaspberryPi Zero W
-		author: Ploy Sithisakulrat
-		published on 5/1/2018
-		contribution: Taron Foxworth
+/*	device.js - runs on RaspberryPi
+	author: Ploy Sithisakulrat
+	published on 5/2/2018
+	contribution: Taron Foxworth
 */
 
 //Get library
 var mqtt = require('mqtt')
-
 const bulb = require('tplink-lightbulb')
 
-//Use your CloudMQTT credentials
+// CloudMQTT credentials
 //mqtt.connect('mqtt://[server]:[websockets port]'
 var client = mqtt.connect('mqtt://m12.cloudmqtt.com:15044', {
 	username: "zqicfsxt",
 	password: "ezMx6GPrNC9J"
 })
 
-//When connected to MQTT, subscribe to the Web Services
+//When connected to MQTT, subscribe to the Web Server
 client.on('connect', function () {
 	console.log("Connected to MQTT.")
 
 	client.subscribe('web')
 })
 
-//
-	let status
+/*
+ * listen to a message from te web server
+ * when 'on' button is click, device turns the light on
+ * and vice versa
+ */
 client.on('message', function (topic, message) {
 	if (topic === 'web') {
 
 		if (message.toString() === "on") {
-			// turn the light on
-			// set status to true
+			// set status to true and turn the light on
 		  status = true;
 			console.log("I have a message: " + message.toString())
 			client.publish('device', 'on')
@@ -47,8 +48,7 @@ client.on('message', function (topic, message) {
 						})
 				})
 		} else {
-			// turn the light off
-			// set status to false
+			// set status to false and turn the light off
 		  status = false;
 			console.log("I have a message: " + message.toString())
 			client.publish('device', 'off')
@@ -68,6 +68,7 @@ client.on('message', function (topic, message) {
 
 		//save message DB
 	} else {
+		//when topic is not found
 		console.log("There is no such topic exist")
 	}
 })
