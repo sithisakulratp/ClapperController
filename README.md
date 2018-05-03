@@ -38,4 +38,4 @@ Follow the instruction on the following link: https://zeit.co/now#get-started
 
 With all of the above installed and downloaded correctly, running the command 'now' will give you a link to your depoloyed web service.
 
-For more information and more detailed instructions, please see my blog on Hackster (coming soon)
+For more information and more detailed instructions, please see my blog on Hackster.io https://www.hackster.io/ploysitis/tp-link-smart-bulb-controller-6a3531 
