@@ -9,10 +9,10 @@ var mqtt = require('mqtt')
 const bulb = require('tplink-lightbulb')
 
 // CloudMQTT credentials
-//mqtt.connect('mqtt://[server]:[websockets port]'
-var client = mqtt.connect('mqtt://m12.cloudmqtt.com:15044', {
-	username: "zqicfsxt",
-	password: "ezMx6GPrNC9J"
+// mqtt.connect('mqtt://[server]:[websockets port]'
+var client = mqtt.connect('[server]:[websockets port]', {
+	username: "[username]",
+	password: "[password]"
 })
 
 //When connected to MQTT, subscribe to the Web Server
