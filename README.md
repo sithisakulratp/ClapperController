@@ -1,6 +1,6 @@
 # IoT Smart Bulb Controller
 
-## Get Started
+## Getting Started
 
  - Clone the above files into a specific directory on your computer.
  
@@ -12,7 +12,9 @@
 ### ExpressJS:
    I use ExpressJS as Node.js web application platform
     
-   https://expressjs.com/en/starter/installing.html 
+   https://expressjs.com/en/starter/installing.html Or run the command
+   
+        npm install express --save
 
 ### - MQTT:
    https://www.npmjs.com/package/mqtt OR use the command
