@@ -1,5 +1,10 @@
 # IoT Smart Bulb Controller
 
+## Required Hardware
+ - TP-Link Smart Bulb model LB130: https://www.tp-link.com/us/products/details/cat-5609_LB130.html 
+ - Raspberry Pi 3 Model B: https://www.raspberrypi.org/products/raspberry-pi-3-model-b/ 
+ - other hardware requried to work with the Pi (see Getting Started with Raspberry Pi below)
+
 ## Getting Started
 
  - Clone the above files into a specific directory on your computer.
