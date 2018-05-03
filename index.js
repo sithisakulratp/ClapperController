@@ -11,9 +11,9 @@ const app = express()
 
 // CloudMQTT credentials
 //mqtt.connect('mqtt://[server]:[websockets port]'
-var client = mqtt.connect('mqtt://m12.cloudmqtt.com:15044', {
-	username: "zqicfsxt",
-	password: "ezMx6GPrNC9J"
+var client = mqtt.connect('mqtt://[server]:[websockets port]', {
+	username: "[username]",
+	password: "[password]"
 })
 
 app.get('/', function (req, res) {
