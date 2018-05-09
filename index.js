@@ -42,7 +42,11 @@ client.on('error', function (err) {
 client.on('message', function(topic, message){
 	if(topic === 'device'){
 			// toggle the switch
-			console.log("Switch toggled")
+			if(message.toString() === "on") {
+				console.log("Switch toggled: on");
+			} else {
+				console.log("Switch toggled: off");
+			}
 	}
 })
 
